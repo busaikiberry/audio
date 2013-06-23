@@ -25,6 +25,10 @@ public class Recorder extends Thread {
 		DataLine.Info info = new DataLine.Info( TargetDataLine.class, linear );
         try {
 			target = (TargetDataLine)AudioSystem.getLine( info );
+			System.out.print("info: ");
+			System.out.println(info);
+			System.out.print("target: ");
+			System.out.println(target);
 	        
 	        // ターゲットデータラインを開く
 	        target.open( linear );
